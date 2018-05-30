@@ -5,7 +5,7 @@ Starter repo for course project
 In this assessment, you will work with other students as a team to create a web app to solve a real problem, using the full SDLC and applying security best practices at every step. 
 
 ## Collaboration tools
-For share code and integrating your individual code with that of the team, you are requested to use GitHub / GitHub Classroom.
+For sharing code files and integrating your individual code with that of the team, you are requested to use GitHub / GitHub Classroom.
 **This** is the single, shared repository for your team.  
  
 
