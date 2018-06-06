@@ -1,20 +1,23 @@
 # SecureWebAppProject
-Starter repo for course project
+Starter repo for course project IT6036 App Security and Server-Side Dev.
 
-## Assessment overview
-In this assessment, you will work with other students as a team to create a web app to solve a real problem, using the full SDLC and applying security best practices at every step. 
+## Instructions for team members
+Please follow these instructions to practice creating branches, pull requests and merging.
 
-## Collaboration tools
-For sharing code files and integrating your individual code with that of the team, you are requested to use GitHub / GitHub Classroom.
-**This** is the single, shared repository for your team.  
- 
+1. Clone this repo and create a local version of it on your workstation
+2. Create a branch, for example
+3. Add you name and a short sentence about yourself in this file, under __Team members__
+4. Commit and push the changes to the remote GitHub repo
+5. In GitHub create a pull request.
+6. Merge your pull request.
+7. Check that your changes have merged correctly with other people's changes. Resolve any conflict.
+8. Pull the changes down to your local repo
 
-YOU CAN DELETE ALL THE TEXT ABOVE AND INCLUDING THIS LINE!
 
 # Your Web App Name
 
 ## Overview
-Describe your app
+Describe your app here.
 
 
 ## Team members
