@@ -1,4 +1,4 @@
-# SecureWebAppProject
+# IT6036 Security Project
 Starter repo for course project IT6036 App Security and Server-Side Dev.
 
 ## Instructions for team members
@@ -22,9 +22,11 @@ Describe your app here.
 
 ## Team members
 Write something about yourself, e.g. your hobbies, your favourite band, your favourite cafe/bar in town, ...
-* person 1
-* person 2
-* person 3
+* John Wright - #First!
+* Brayden Dawson - 
+* Dwain Aiolupotea - 
+* Leone Krauze - 
+* Juan Miguell Brocca Magallanes - 
    
      
      
