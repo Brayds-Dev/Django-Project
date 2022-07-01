@@ -24,7 +24,7 @@ Describe your app here.
 Write something about yourself, e.g. your hobbies, your favourite band, your favourite cafe/bar in town, ...
 * John Wright - #First!
 * Brayden Dawson - 
-* Dwain Aiolupotea - 
+* Dwain Aiolupotea - I design things as a hobby, favourite is rubber band, I don't drink coffee just water.
 * Leone Krauze - 
 * Juan Miguell Brocca Magallanes - 
    
