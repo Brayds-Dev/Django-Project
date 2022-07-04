@@ -22,7 +22,7 @@ Describe your app here.
 
 ## Team members
 Write something about yourself, e.g. your hobbies, your favourite band, your favourite cafe/bar in town, ...
-* John Wright - Procrastination is my hobby, and as a result I dont drink water, just coffee.
+* John Wright - Procrastination is my hobby, and as a result I dont drink water, just coffee. - pushed from Visual Studio!
 * Brayden Dawson - I like long walks on the beach and shooting lasers from my eyes.
 * Dwain Aiolupotea - I design things as a hobby, favourite is rubber band, I don't drink coffee just water.
 * Leone Krauze - 
