@@ -25,7 +25,7 @@ Write something about yourself, e.g. your hobbies, your favourite band, your fav
 * John Wright - #First!
 * Brayden Dawson - I like long walks on the beach and shooting lasers from my eyes.
 * Dwain Aiolupotea - I design things as a hobby, favourite is rubber band, I don't drink coffee just water.
-* Leone Krauze - 
+* Leone Krauze - #Done
 * Juan Miguell Brocca Magallanes - 
    
      
