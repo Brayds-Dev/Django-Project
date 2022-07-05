@@ -17,7 +17,7 @@ class ItemDetailView(DetailView):
 class ItemCreateView( CreateView):
     model = Item
     template_name = "home/item_new.html"
-    fields = ["title", "decription", "price", "condition"]
+    fields = ["title", "description", "price", "condition"]
 
     def form_valid(self, form):
         form.instance.author = self.request.user
