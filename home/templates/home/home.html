@@ -9,7 +9,7 @@
 <div class="card mt-4">
     <div class="card-header">
         <span class="font-weight-bold">
-            <a href="#"> {{ item.title }} </a>
+            <a href="{% url 'item_detail' item.pk %}"> {{ item.title }} </a>
         </span>
         &middot;
         <span class="text-muted"> by {{ item.user }} </span>
