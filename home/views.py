@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 
 from .models import Item
 # Create your views here.
@@ -14,3 +14,11 @@ class ItemDetailView(DetailView):
 
     # Will be adding comment context data here for adding comments
 
+class ItemCreateView( CreateView):
+    model = Item
+    template_name = "home/item_new.html"
+    fields = ["title", "decription", "price", "condition"]
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
