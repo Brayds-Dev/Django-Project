@@ -1,8 +1,19 @@
 <!-- Home page for the app - shows all listings.
-    Done by John W. -->
+     by John W. -->
 
 {% extends "home/base.html" %}
 {% block title %}Home Page{% endblock title%}
 {% block content %}
-    <h1> Welcome to the home page! </h1>
+
+{% for item in item_list %}
+<div class="card mt-4"> 
+    <div class="card-header"> 
+        <span class="font-weight-bold"> 
+        <a href="#"> {{ item.title }} </a>
+        </span>
+        &middot;
+        <span class="text-muted"> by {{ item.author }} </span>
+    </div>
+</div>
+{%endfor%}
 {%endblock content%}
