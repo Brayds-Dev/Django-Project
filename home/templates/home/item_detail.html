@@ -1,0 +1,9 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<h2>{{ item.title }}</h2>
+<h4>Listed by {{ item.user }}</h4>
+<div>
+    {{ item.description }}
+</div>
+{% endblock content %}
