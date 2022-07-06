@@ -1,0 +1,21 @@
+body {
+  background-color: #ebebeb;
+}
+
+a {
+  text-decoration: none;
+}
+
+img#logo {
+  width: 2.2em;
+  margin-right: 0.5em;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
