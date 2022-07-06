@@ -1,10 +1,10 @@
 {% extends 'home/base.html' %}
 
 {% block content %}
-    <h1>New Item</h1>
-    <form method="post" action="">
+    <h1>Edit Post</h1>
+    <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Save">
+        <input type="submit" class="btn btn-info ml-2" value="Update">
     </form>
 {% endblock content %}
