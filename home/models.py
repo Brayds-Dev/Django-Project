@@ -24,4 +24,4 @@ class Item(models.Model):
     )
 
     def __str__(self):
-        return self.title + '-' + self.user.first_name
+        return self.title + ' - ' + self.user.first_name
