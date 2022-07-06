@@ -1,7 +1,7 @@
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
-
+from .forms import CommentForm
 from .models import Item
 # Create your views here.
 
@@ -13,7 +13,17 @@ class ItemDetailView(DetailView):
     model = Item
     template_name = "home/item_detail.html"
 
-    # Will be adding comment context data here for adding comments
+    #Comment context data here for adding comments
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["form"] = CommentForm()
+        return context
+
+    success_url = reverse_lazy("home")
+
+    # def form_valid(self, form):
+    #     form.instance.author = self.request.user
+    #     return super().form_valid(form)
 
 class ItemCreateView(LoginRequiredMixin, CreateView):
     model = Item
