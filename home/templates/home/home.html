@@ -3,17 +3,17 @@
 
 {% extends "home/base.html" %}
 {% block title %}Home Page{% endblock title%}
-{% block content %}
-
-{% for item in item_list %}
-<div class="card mt-4">
-    <div class="card-header">
-        <span class="font-weight-bold">
-            <a href="{% url 'item_detail' item.pk %}"> {{ item.title }} </a>
-        </span>
-        &middot;
-        <span class="text-muted"> by {{ item.user }} </span>
+{%block content %}
+<div class="cards">
+    {% for item in item_list %}
+    <div class="card mt-4">
+        <div class="card-header">
+            <span class="font-weight-bold">
+                <a href="{% url 'item_detail' item.pk %}"> {{ item.title }} </a>
+            </span>
+            &middot;
+            <span class="text-muted"> by {{ item.user }} </span>
+        </div>
     </div>
-</div>
-{%endfor%}
-{%endblock content%}
+    {%endfor%}
+</div>{%endblock content%}
