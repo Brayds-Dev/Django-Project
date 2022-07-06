@@ -1,0 +1,19 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<h2>{{ item.title }}</h2>
+<h4>Listed by {{ item.user }}</h4>
+<div>
+    {{ item.description }}
+    <br>
+    &#36;{{ item.price }}
+    <br>
+    {{ item.condition }}
+</div>
+<hr>
+    <div class="card-footer text-center text-muted">
+        <p>
+            <a href="{% url 'item_edit' item.pk %}" class="btn btn-outline-info ml-2"> Edit </a> | <a href="{% url 'item_delete' item.pk %}" class="btn btn-outline-info ml-2"> Delete </a>
+        </p>
+    </div>
+{% endblock content %}
