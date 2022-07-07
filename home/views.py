@@ -8,7 +8,6 @@ from .models import Item
 class AboutView(TemplateView):
     template_name = "home/about.html"
 
-
 class ItemListView(ListView):
     model = Item
     template_name = "home/home.html"
