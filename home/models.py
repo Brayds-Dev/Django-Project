@@ -48,5 +48,5 @@ class Comment(models.Model):
         return self.body
 
     def get_absolute_url(self):
-        return reverse("item_detail", kwargs={'pk': self.pk})
+        return reverse("home")
   
