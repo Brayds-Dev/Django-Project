@@ -1,5 +1,5 @@
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, TemplateView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import CommentForm
 from django.views import View
@@ -8,7 +8,13 @@ from django.urls import reverse_lazy, reverse
 from django.views.generic import FormView
 from .models import Item
 
+
+class AboutView(TemplateView):
+    template_name = "home/about.html"
+
+
 # Create your views here.
+
 class ItemListView(ListView):
     model = Item
     template_name = "home/home.html"
