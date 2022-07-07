@@ -1,19 +1,57 @@
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
-
+from .forms import CommentForm
+from django.views import View
+from django.views.generic.detail import SingleObjectMixin
+from django.urls import reverse_lazy, reverse
+from django.views.generic import FormView
 from .models import Item
-# Create your views here.
 
+# Create your views here.
 class ItemListView(ListView):
     model = Item
     template_name = "home/home.html"
 
-class ItemDetailView(DetailView):
+class CommentGet(DetailView):
     model = Item
     template_name = "home/item_detail.html"
 
-    # Will be adding comment context data here for adding comments
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["form"] = CommentForm()
+        return context
+
+class CommentPost(SingleObjectMixin, FormView):
+    model = Item
+    form_class = CommentForm
+    template_name = "home/item_detail.html"
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().post(request, *args, *kwargs)
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user # new
+        comment = form.save(commit=False)
+        comment.item = self.object
+        comment.save()
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        item = self.get_object()
+        return reverse("item_detail", kwargs={"pk": item.pk})
+
+
+class ItemDetailView(View):
+    def get(self, request, *args, **kwargs):
+        view = CommentGet.as_view()
+        return view(request, *args, **kwargs)
+    
+    def post(self, request, *args, **kwargs):
+        view = CommentPost.as_view()
+        return view(request, *args, **kwargs)
+
 
 class ItemCreateView(LoginRequiredMixin, CreateView):
     model = Item
