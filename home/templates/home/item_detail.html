@@ -2,18 +2,18 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<h2>{{ item.title }}</h2>
-<h4>Listed by {{ item.user }}</h4>
-<div>
-    {{ item.description }}
-    <br>
-    &#36;{{ item.price }}
-    <br>
-    {{ item.condition }}
+<div class="card m-4 p-4">
+  <h2 class="display-4" >{{ item.title }}</h2>
+    <h6 class="display-6  text-muted">Listed by {{ item.user }}</h4>
+  <div>
+      <p>{{ item.description }}</p>
+      <p>Asking Price: &#36;{{ item.price }}</p> 
+      <p>Condition: {{ item.condition }}</p>
+  </div>
 </div>
 <!--Code that displays all the comments below a listing-->
-<div class="list-group">
-  <div class="list-group-item list-group-item-action">
+<div class="list-group m-4">
+  <div class="list-group-item list-group-item-action p-4">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Comments</h5>
     </div>
@@ -36,7 +36,7 @@
     <form action="" method="post" class="ml-2">
       {% csrf_token %}
       {{ form|crispy }}
-      <button class="btn btn-success ml-2" type="submit">publish</button>
+      <button class="btn btn-dark ml-2" type="submit">publish</button>
     </form>
   </div>
   {% else %}
@@ -47,8 +47,7 @@
 <hr>
   <div class="card-footer text-center text-muted">
       <p>
-          <a href="{% url 'item_edit' item.pk %}" class="btn btn-outline-info ml-2"> Edit </a> | <a href="{% url 'item_delete' item.pk %}" class="btn btn-outline-info ml-2"> Delete </a>
+          <a href="{% url 'item_edit' item.pk %}" class="btn btn-outline-dark ml-2"> Edit </a> | <a href="{% url 'item_delete' item.pk %}" class="btn btn-outline-dark ml-2"> Delete </a>
       </p>
-      <p>Back to <a href="{% url 'home' %}" class="btn btn-outline-info ml-2">All Posts</a></p>
   </div>
 {% endblock content %}

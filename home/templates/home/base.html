@@ -34,33 +34,33 @@
 
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <a href="{% url 'home' %}" class="nav-link" aria-current="page"
-              >home</a
+            <a href="{% url 'home' %}" class="nav-link text-dark" aria-current="page"
+              >Home</a
             >
           </li>
           <li class="nav-item">
-            <a href="{% url 'item_new' %}" class="nav-link">List Item</a>
+            <a href="{% url 'item_new' %}" class="nav-link text-dark">List Item</a>
           </li>
 
           <li class="nav-item">
-            <a href="{% url 'about' %}" class="nav-link">About</a>
+            <a href="{% url 'about' %}" class="nav-link text-dark">About</a>
           </li>
 
           {% if user.is_authenticated %}
           <li class="nav-item">
-            <a href="{% url 'profile' user.pk %}" class="nav-link">Profile</a>
+            <a href="{% url 'profile' user.pk %}" class="nav-link text-dark" >Profile</a>
           </li>
           
           <li class="nav-item">
-            <a href="{% url 'logout' %}" class="nav-link">logout</a>
+            <a href="{% url 'logout' %}" class="nav-link text-dark">Logout</a>
           </li>
 
           {% else %}
           <li class="nav-item">
-            <a href="{% url 'login' %}" class="nav-link">login</a>
+            <a href="{% url 'login' %}" class="nav-link text-dark">Login</a>
           </li>
           <li class="nav-item">
-            <a href="{% url 'signup' %}" class="nav-link">signup</a>
+            <a href="{% url 'signup' %}" class="nav-link text-dark">Signup</a>
           </li>
           {% endif %}
         </ul>
