@@ -1,8 +1,17 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Item
+from .models import Item, Comment
 
-admin.site.register(Item)
+class CommentInline(admin.StackedInline):
+    model = Comment
+    extra = 0
 
+class ItemAdmin(admin.ModelAdmin):
+    inlines = [
+        CommentInline,
+    ]
+
+admin.site.register(Item, ItemAdmin)
+admin.site.register(Comment)
 # testing 

@@ -8,6 +8,6 @@ urlpatterns = [
     path("items/<int:pk>/delete/", ItemDeleteView.as_view(), name="item_delete"),
     path("about", AboutView.as_view(), name="about"),
     path("", ItemListView.as_view(), name="home"),
-    
-    
+
+
 ]
