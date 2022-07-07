@@ -1,6 +1,6 @@
 from django.urls import reverse_lazy
 from django.views.generic import ListView, TemplateView, DetailView, CreateView, UpdateView, DeleteView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .forms import CommentForm
 from django.views import View
 from django.views.generic.detail import SingleObjectMixin
@@ -69,7 +69,7 @@ class ItemCreateView(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
-class ItemUpdateView(LoginRequiredMixin, UpdateView):
+class ItemUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Item
     template_name = "home/item_edit.html"
     fields = ["title", "description", "price", "condition"]
@@ -79,7 +79,7 @@ class ItemUpdateView(LoginRequiredMixin, UpdateView):
         obj = self.get_object()
         return obj.user == self.request.user
 
-class ItemDeleteView(LoginRequiredMixin, DeleteView):
+class ItemDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Item
     template_name = "home/item_delete.html"
     success_url = reverse_lazy("home")
