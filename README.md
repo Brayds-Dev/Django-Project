@@ -1,5 +1,5 @@
 # IT6036 Security Project
-Starter repo for course project IT6036 App Security and Server-Side Dev.
+The application is located in the branch labelled 'main'
 
 ## Instructions for team members
 Please follow these instructions to practice creating branches, pull requests and merging.
